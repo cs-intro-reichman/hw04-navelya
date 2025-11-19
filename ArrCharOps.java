@@ -159,7 +159,11 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
-        // Replace the following statement with your code
+        // Check for empty strings (error condition)
+        if (str1.isEmpty() || str2.isEmpty()) {
+            return -2;
+        }
+        
         int len1 = str1.length();
         int len2 = str2.length();
         int minLen = Math.min(len1, len2);
