@@ -3,13 +3,11 @@ public class Primes {
         int n = Integer.parseInt(args[0]);
         System.out.println("Prime numbers up to "+ n +":");
         int count = 0;
-        int num = 2;
-        while (count < n) {
-            if (isPrime(num)) {
-                System.out.println(num);
+        for (int i = 2; i <= n; i++) {
+            if (isPrime(i)) {
+                System.out.println(i);
                 count++;
             }
-            num++;
         }
         System.out.println("There are " + count + " primes between 2 and " + n + " (" + (count * 100 / n) + "% are primes)");
     }
